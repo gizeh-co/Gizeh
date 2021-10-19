@@ -1,2 +1,2 @@
 # Gizeh
-Check update of gizeh
+Check updates of gizeh
