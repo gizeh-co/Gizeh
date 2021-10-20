@@ -11,9 +11,9 @@ GizehVersion.Discord=""--this variable will be overwrite by the loader
 if GizehVersion.Check==false then
     if GizehVersion.Version == "0.0.1" then
         print(GizehVersion.MessageSucess)
-        GizehVersion.Check=true
+        GizehVersion.Check=true --this variable will be overwrite
     else
         print(GizehVersion.MessageError.." "..GizehVersion.Discord)
-        GizehVersion.Check=false
+        GizehVersion.Check=false --this variable will be overwrite
     end
 end
