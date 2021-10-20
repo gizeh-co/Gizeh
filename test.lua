@@ -18,6 +18,8 @@ local code = [[
     end
 ]]
 
+GizehTest.Main.Logs("Added Function",string,args,code)
+
 code = FormatCode(code,string,args,code)
 end
 
