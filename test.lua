@@ -22,6 +22,7 @@ GizehTest.Main.Function.Add = function(string,args,code)
     			GizehTest.Main.Logs("Added Function",string,args,code)
 
     			code = FormatCode(code,string,args,code)
+			return code
   		else
       			local code = [[
     			#STR function()
@@ -31,6 +32,7 @@ GizehTest.Main.Function.Add = function(string,args,code)
     			GizehTest.Main.Logs("Added Function",string,code)
 
     			code = FormatCode(code,string,code)
+			return code
  		end
 	else
 		print("please specify name of function and code")
