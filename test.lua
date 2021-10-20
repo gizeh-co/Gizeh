@@ -32,6 +32,8 @@ GizehTest.Main.Function.Add = function(string,args,code)
 
     			code = FormatCode(code,string,code)
  		end
+	else
+		print("please specify name of function and code")
 	end
 
 end
