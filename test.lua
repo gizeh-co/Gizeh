@@ -3,7 +3,7 @@ local GizehTest = GizehTest or {}
 GizehTest.Main = GizehTest.Main or {}
 GizehTest.Main.Message = "ceci est un message test pour gizeh"
 
-function FormatCode( lua, string ,args)
+function FormatCode( lua, string ,args,code)
 	
 	lua = string.Replace(lua, "#STR", string)
   lua = string.Replace(lua, "#ARGS", args)
