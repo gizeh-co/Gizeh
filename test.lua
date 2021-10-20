@@ -38,6 +38,6 @@ GizehTest.Main.Function.Add = function(string,args,code)
 
 end
 
-GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent..'c\'est ouf')")
+GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent")
 
 --le reste des tests seront fait ici
