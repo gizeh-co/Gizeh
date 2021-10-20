@@ -7,31 +7,31 @@ function FormatCode( lua, string ,args,code)
 	
 	lua = string.Replace(lua, "#STR", string)
   lua = string.Replace(lua, "#ARGS", args)
-  lua = string.Replace(lua, "#CODE", code)
+  lua = string.Replace(lua, "#CODING", coding)
 	return lua
 end
 
-GizehTest.Main.Function.Add = function(string,args,code)
+GizehTest.Main.Function.Add = function(string,args,coding)
 	if string!="" and code!="" then
   		if args!="" then
     			local code = [[
     			#STR function(#ARG)
-        			#CODE
+        			#CODING
     			end
      			]]
-    			GizehTest.Main.Logs("Added Function",string,args,code)
+    			GizehTest.Main.Logs("Added Function",string,args,coding)
 
-    			code = FormatCode(code,string,args,code)
+    			code = FormatCode(code,string,args,coding)
 			return code
   		else
       			local code = [[
     			#STR function()
-        			#CODE
+        			#CODING
     			end
      			]]
-    			GizehTest.Main.Logs("Added Function",string,code)
+    			GizehTest.Main.Logs("Added Function",string,coding)
 
-    			code = FormatCode(code,string,code)
+    			code = FormatCode(code,string,coding)
 			return code
  		end
 	else
