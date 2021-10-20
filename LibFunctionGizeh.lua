@@ -41,6 +41,8 @@ GizehTest.Main.Function.Add = function(string,args,coding)
 
 end
 
-GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent")
+
+
+GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent")--this function for test
 
 --le reste des tests seront fait ici
