@@ -12,15 +12,28 @@ function FormatCode( lua, string ,args)
 end
 
 GizehTest.Main.Function.Add = function(string,args,code)
-local code = [[
-    #STR function(#ARG)
-        #CODE
-    end
-]]
+	if string!="" and code!="" then
+  		if args!="" then
+    			local code = [[
+    			#STR function(#ARG)
+        			#CODE
+    			end
+     			]]
+    			GizehTest.Main.Logs("Added Function",string,args,code)
 
-GizehTest.Main.Logs("Added Function",string,args,code)
+    			code = FormatCode(code,string,args,code)
+  		else
+      			local code = [[
+    			#STR function()
+        			#CODE
+    			end
+     			]]
+    			GizehTest.Main.Logs("Added Function",string,code)
 
-code = FormatCode(code,string,args,code)
+    			code = FormatCode(code,string,code)
+ 		end
+	end
+
 end
 
 GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent..'c\'est ouf')")
