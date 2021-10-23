@@ -4,12 +4,45 @@ local GizehTest = GizehTest or {}
 GizehTest.Main = GizehTest.Main or {}
 GizehTest.Main.Message = "ceci est un message test pour gizeh"
 
+local Lvar = ""
+local FNvar = ""
+local FCvar = ""
+
 function FormatCode( lua, string ,args,code)
-	
-	lua = string.Replace(lua, "#STR", string)
-  lua = string.Replace(lua, "#ARGS", args)
-  lua = string.Replace(lua, "#CODING", coding)
-	return lua
+	if lua!="" then
+		if string!="" then
+			lua = string.Replace(lua, "#STR", string)
+		elseif args!="" then
+  			lua = string.Replace(lua, "#ARGS", args)
+		elseif code!="" then
+ 			lua = string.Replace(lua, "#CODING", coding)
+		end
+		return lua
+	end
+end
+
+GizehTest.Main.Logs = function(logs,function_name,function_content)
+	print("Gizeh Function Lib Logs :\n")
+	if logs!="" and function_name!="" and function_content!="" then
+		print("[+] Gizeh Success "..logs.." Name Of Function Is "..function_name.." Content Of This Function Is "..function_content)
+	else
+		if logs=="" then
+			Lvar = tostring(nil)
+		else
+			Lvar = logs
+		end 
+		if function_name=="" then
+			FNvar = tostring(nil)
+		else
+			FNvar = function_name
+		end 
+		if function_content=="" then
+			FCvar = tostring(nil)
+		else
+			FCvar = function_content
+		end
+		print("[-] Gizeh Error "..Lvar.." Name Of Function Is "..FNvar.." Content Of This Function Is "..FCvar)
+	end
 end
 
 GizehTest.Main.Function.Add = function(string,args,coding)
