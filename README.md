@@ -1,5 +1,5 @@
 # Gizeh Soon ???
-<h1 color="red">font for gizeh :</h1><br>
+<b color="red">font for gizeh :</b><br>
 -Doctor Glitch<br>
 -Fixedsys<br>
 -Arial
