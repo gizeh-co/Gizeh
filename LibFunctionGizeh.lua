@@ -8,7 +8,7 @@ local Lvar = ""
 local FNvar = ""
 local FCvar = ""
 
-function FormatCode( lua, string ,args,code)
+GizehTest.ForatCode = function( lua, string ,args,code)
 	if lua!="" then
 		if string!="" then
 			lua = string.Replace(lua, "#STR", string)
@@ -55,7 +55,7 @@ GizehTest.Main.Function.Add = function(string,args,coding)
      			]]
     			GizehTest.Main.Logs("Added Function",string,args,coding)
 
-    			code = FormatCode(code,string,args,coding)
+    			code = GizehTest.ForatCode(code,string,args,coding)
 			return code
   		else
       			local code = [[
@@ -65,7 +65,7 @@ GizehTest.Main.Function.Add = function(string,args,coding)
      			]]
     			GizehTest.Main.Logs("Added Function",string,coding)
 
-    			code = FormatCode(code,string,coding)
+    			code = GizehTest.ForatCode(code,string,coding)
 			return code
  		end
 	else
