@@ -8,7 +8,7 @@ local Lvar = ""
 local FNvar = ""
 local FCvar = ""
 
-GizehTest.ForatCode = function( lua, string ,args,code)
+GizehTest.ForatCode = function( lua, string ,args,coding)
 	if lua!="" then
 		if string!="" then
 			lua = string.Replace(lua, "#STR", string)
@@ -76,6 +76,6 @@ end
 
 
 
-GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent")--this function for test
+GizehTest.Main.Function.Add("LaFonctionDeOuf","Argument","print(Argmuent)")--this function for test
 
 --le reste des tests seront fait ici
